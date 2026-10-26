@@ -1,0 +1,40 @@
+hxxp://parasoft[.]com/jsp/products[.]jsp?itemId=13
+  -> hxxps://parasoft[.]com/jsp/products[.]jsp?itemId=13
+hxxp://kskhhsgcacaca[.]co[.]vu
+  -> hxxps://kskhhsgcacaca[.]co[.]vu
+hxxp://bartechsystems[.]ca
+  -> hxxps://bartechsystems[.]ca
+hxxp://flick[.]com/games/RPGs/hero-netrunning[.]html
+  -> hxxps://flick[.]com/games/RPGs/hero-netrunning[.]html
+hxxp://sites-centre-2018[.]000webhostapp[.]com
+  -> hxxps://sites-centre-2018[.]000webhostapp[.]com
+hxxp://editcss[.]mozdev[.]org/indexwpe[.]html
+  -> hxxps://editcss[.]mozdev[.]org/indexwpe[.]html
+hxxp://ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/
+  -> hxxps://ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/
+hxxp://ashampoo[.]com/products/0009/
+  -> hxxps://ashampoo[.]com/products/0009/
+hxxp://mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe
+  -> hxxps://mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe
+hxxp://occidental[.]com[.]au/tts[.]html
+  -> hxxps://occidental[.]com[.]au/tts[.]html
+hxxp://angelfire[.]com/journal2/benway68/index[.]html
+  -> hxxps://angelfire[.]com/journal2/benway68/index[.]html
+hxxp://paypal[.]konten00xkunden00-aktualiseren[.]com
+  -> hxxps://paypal[.]konten00xkunden00-aktualiseren[.]com
+hxxp://informatik[.]uni-trier[.]de/~ley/db/conf/splc/
+  -> hxxps://informatik[.]uni-trier[.]de/~ley/db/conf/splc/
+hxxp://secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462
+  -> hxxps://secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462
+hxxp://angelfire[.]com/games/gst/
+  -> hxxps://angelfire[.]com/games/gst/
+hxxp://216[.]180[.]117[.]213:33979/Mozi[.]m
+  -> hxxps://216[.]180[.]117[.]213:33979/Mozi[.]m
+hxxp://172[.]39[.]61[.]146:35147/Mozi[.]m
+  -> hxxps://172[.]39[.]61[.]146:35147/Mozi[.]m
+hxxp://bulkwso[.]com/wp-content/uploads/mint[.]htm
+  -> hxxps://bulkwso[.]com/wp-content/uploads/mint[.]htm
+hxxp://5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+  -> hxxps://5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+hxxp://zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css
+  -> hxxps://zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css

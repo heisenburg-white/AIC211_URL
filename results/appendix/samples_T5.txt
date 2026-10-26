@@ -1,0 +1,40 @@
+hxxp://parasoft[.]com/jsp/products[.]jsp?itemId=13
+  -> hxxp://paras-oft[.]com/jsp/products[.]jsp?itemId=13
+hxxp://bartechsystems[.]ca
+  -> hxxp://bartechs-ystems[.]ca
+hxxp://flick[.]com/games/RPGs/hero-netrunning[.]html
+  -> hxxp://fl-ick[.]com/games/RPGs/hero-netrunning[.]html
+hxxp://sites-centre-2018[.]000webhostapp[.]com
+  -> hxxp://sites-centre-2018[.]000web-hostapp[.]com
+hxxp://editcss[.]mozdev[.]org/indexwpe[.]html
+  -> hxxp://editcss[.]mozd-ev[.]org/indexwpe[.]html
+hxxp://ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/
+  -> hxxp://ilovespee-dbumps[.]com/car-insurance-info-you-have-to-know/
+hxxp://ashampoo[.]com/products/0009/
+  -> hxxp://asham-poo[.]com/products/0009/
+hxxp://mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe
+  -> hxxp://mitsui-jyuku[.]mi-xh[.]jp/uploads/44N8Mk0[.]exe
+hxxp://occidental[.]com[.]au/tts[.]html
+  -> hxxp://occid-ental[.]com[.]au/tts[.]html
+hxxp://angelfire[.]com/journal2/benway68/index[.]html
+  -> hxxp://ange-lfire[.]com/journal2/benway68/index[.]html
+hxxp://paypal[.]konten00xkunden00-aktualiseren[.]com
+  -> hxxp://paypal[.]konten00xkunden00-ak-tualiseren[.]com
+hxxp://angelfire[.]com/games/gst/
+  -> hxxp://ang-elfire[.]com/games/gst/
+hxxp://bulkwso[.]com/wp-content/uploads/mint[.]htm
+  -> hxxp://bulk-wso[.]com/wp-content/uploads/mint[.]htm
+hxxp://5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+  -> hxxp://5de7b3245c2760991[.]tem-porary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+hxxp://zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css
+  -> hxxp://zoetekro-on[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css
+hxxp://mysite[.]verizon[.]net/~vze4r2c2/Diplomacy/
+  -> hxxp://mysite[.]ve-rizon[.]net/~vze4r2c2/Diplomacy/
+hxxp://copilba[.]fr/indexgb[.]html
+  -> hxxp://copi-lba[.]fr/indexgb[.]html
+hxxp://home[.]scarlet[.]be/cms-productions/
+  -> hxxp://home[.]sca-rlet[.]be/cms-productions/
+hxxp://backerstreet[.]com/rec/rec[.]htm
+  -> hxxp://backer-street[.]com/rec/rec[.]htm
+hxxp://sigin-activitylimit[.]serveirc[.]com
+  -> hxxp://sigin-activitylimit[.]se-rveirc[.]com

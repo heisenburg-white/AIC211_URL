@@ -1,0 +1,40 @@
+hxxp://parasoft[.]com/jsp/products[.]jsp?itemId=13
+  -> hxxp://parasoft[.]com/jsp/products[.]jsp?itemId=13&lang=en
+hxxp://kskhhsgcacaca[.]co[.]vu
+  -> hxxp://kskhhsgcacaca[.]co[.]vu/?lang=en
+hxxp://bartechsystems[.]ca
+  -> hxxp://bartechsystems[.]ca/?utm_source=mail
+hxxp://flick[.]com/games/RPGs/hero-netrunning[.]html
+  -> hxxp://flick[.]com/games/RPGs/hero-netrunning[.]html?ref=home
+hxxp://sites-centre-2018[.]000webhostapp[.]com
+  -> hxxp://sites-centre-2018[.]000webhostapp[.]com/?page=1
+hxxp://editcss[.]mozdev[.]org/indexwpe[.]html
+  -> hxxp://editcss[.]mozdev[.]org/indexwpe[.]html?lang=en
+hxxp://ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/
+  -> hxxp://ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/?lang=en
+hxxp://ashampoo[.]com/products/0009/
+  -> hxxp://ashampoo[.]com/products/0009/?ref=home
+hxxp://mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe
+  -> hxxp://mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe?lang=en
+hxxp://occidental[.]com[.]au/tts[.]html
+  -> hxxp://occidental[.]com[.]au/tts[.]html?ref=home
+hxxp://angelfire[.]com/journal2/benway68/index[.]html
+  -> hxxp://angelfire[.]com/journal2/benway68/index[.]html?page=1
+hxxp://paypal[.]konten00xkunden00-aktualiseren[.]com
+  -> hxxp://paypal[.]konten00xkunden00-aktualiseren[.]com/?utm_medium=email
+hxxp://informatik[.]uni-trier[.]de/~ley/db/conf/splc/
+  -> hxxp://informatik[.]uni-trier[.]de/~ley/db/conf/splc/?page=1
+hxxp://secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462
+  -> hxxp://secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462?utm_medium=email
+hxxp://angelfire[.]com/games/gst/
+  -> hxxp://angelfire[.]com/games/gst/?ref=home
+hxxp://216[.]180[.]117[.]213:33979/Mozi[.]m
+  -> hxxp://216[.]180[.]117[.]213:33979/Mozi[.]m?utm_medium=email
+hxxp://172[.]39[.]61[.]146:35147/Mozi[.]m
+  -> hxxp://172[.]39[.]61[.]146:35147/Mozi[.]m?utm_source=mail
+hxxp://bulkwso[.]com/wp-content/uploads/mint[.]htm
+  -> hxxp://bulkwso[.]com/wp-content/uploads/mint[.]htm?page=1
+hxxp://5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+  -> hxxp://5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/?ref=home
+hxxp://zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css
+  -> hxxp://zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css?page=1

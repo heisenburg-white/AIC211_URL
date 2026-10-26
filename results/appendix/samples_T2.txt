@@ -1,0 +1,40 @@
+hxxp://parasoft[.]com/jsp/products[.]jsp?itemId=13
+  -> hxxp://home[.]parasoft[.]com/jsp/products[.]jsp?itemId=13
+hxxp://kskhhsgcacaca[.]co[.]vu
+  -> hxxp://home[.]kskhhsgcacaca[.]co[.]vu
+hxxp://bartechsystems[.]ca
+  -> hxxp://account[.]bartechsystems[.]ca
+hxxp://flick[.]com/games/RPGs/hero-netrunning[.]html
+  -> hxxp://my[.]flick[.]com/games/RPGs/hero-netrunning[.]html
+hxxp://sites-centre-2018[.]000webhostapp[.]com
+  -> hxxp://m[.]sites-centre-2018[.]000webhostapp[.]com
+hxxp://editcss[.]mozdev[.]org/indexwpe[.]html
+  -> hxxp://home[.]editcss[.]mozdev[.]org/indexwpe[.]html
+hxxp://ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/
+  -> hxxp://my[.]ilovespeedbumps[.]com/car-insurance-info-you-have-to-know/
+hxxp://ashampoo[.]com/products/0009/
+  -> hxxp://m[.]ashampoo[.]com/products/0009/
+hxxp://mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe
+  -> hxxp://service[.]mitsui-jyuku[.]mixh[.]jp/uploads/44N8Mk0[.]exe
+hxxp://occidental[.]com[.]au/tts[.]html
+  -> hxxp://portal[.]occidental[.]com[.]au/tts[.]html
+hxxp://angelfire[.]com/journal2/benway68/index[.]html
+  -> hxxp://app[.]angelfire[.]com/journal2/benway68/index[.]html
+hxxp://paypal[.]konten00xkunden00-aktualiseren[.]com
+  -> hxxp://my[.]paypal[.]konten00xkunden00-aktualiseren[.]com
+hxxp://informatik[.]uni-trier[.]de/~ley/db/conf/splc/
+  -> hxxp://app[.]informatik[.]uni-trier[.]de/~ley/db/conf/splc/
+hxxp://secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462
+  -> hxxp://support[.]secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462
+hxxp://angelfire[.]com/games/gst/
+  -> hxxp://my[.]angelfire[.]com/games/gst/
+hxxp://bulkwso[.]com/wp-content/uploads/mint[.]htm
+  -> hxxp://app[.]bulkwso[.]com/wp-content/uploads/mint[.]htm
+hxxp://5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+  -> hxxp://my[.]5de7b3245c2760991[.]temporary[.]link/ZAG9EZ6REDSEFT036998871ZZAZSWQDFLGKOEIR/52ERGFMZPEFMGOLBNCJCEIGZETRZSWZEZR/
+hxxp://zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css
+  -> hxxp://support[.]zoetekroon[.]nl/wp-content/themes/simplo/css/prettyPhoto[.]css
+hxxp://mysite[.]verizon[.]net/~vze4r2c2/Diplomacy/
+  -> hxxp://support[.]mysite[.]verizon[.]net/~vze4r2c2/Diplomacy/
+hxxp://copilba[.]fr/indexgb[.]html
+  -> hxxp://service[.]copilba[.]fr/indexgb[.]html
