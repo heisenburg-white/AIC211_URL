@@ -1,0 +1,40 @@
+hxxp://secure[.]runescape[.]com-zx[.]ru/m=weblogin/loginform481,145,884,33156348,2462
+  -> hxxp://secure[.]runescape[.]com-zx[.]ru/m=webmember/memberform481,145,884,33156348,2462
+hxxp://88[.]190[.]225[.]231:444/recordings/paypal[.]fr/ec/?section=signinpage&update=&cookiecheck=yes&destination=nba/signin
+  -> hxxp://88[.]190[.]225[.]231:444/recordings/paypal[.]fr/ec/?section=signinpage&news=&cookiecheck=yes&destination=nba/signin
+hxxp://bill-verizon[.]7billpay-aol[.]com/ForYourHome/MyAccount/Paymentddptionsaspx[.]html?session=n&goto=hxxps://www22[.]verizon[.]com/ForYourHome/ebillpay/code/MyVerizon2/Code/PaymentOptionsaspx[.]htms[.]asp
+  -> hxxp://bill-verizon[.]7billpay-aol[.]com/ForYourHome/Myuser/Paymentddptionsaspx[.]html?session=n&goto=hxxps://www22[.]verizon[.]com/ForYourHome/ebillpay/code/MyVerizon2/Code/PaymentOptionsaspx[.]htms[.]asp
+hxxp://bannarimills[.]com/BOFA/secure[.]bankofamerica[.]com/secure[.]bankofamerica[.]com/login/sign-in/signOnScreen[.]go/sitekeyverification[.]php
+  -> hxxp://bannarimills[.]com/BOFA/home[.]bankofamerica[.]com/home[.]bankofamerica[.]com/login/sign-in/signOnScreen[.]go/sitekeyverification[.]php
+hxxp://webmacgem[.]com/~real700p/support[.]update[.]your[.]information[.]account/signup/account/
+  -> hxxp://webmacgem[.]com/~real700p/support[.]news[.]your[.]information[.]account/signup/account/
+hxxp://exellce-me[.]co[.]za/free/us[.]match[.]com-login[.]php
+  -> hxxp://exellce-me[.]co[.]za/free/us[.]match[.]com-member[.]php
+hxxp://foxlap[.]com/wp-content/themes/sketch-new/amex/amex/sett[.]php?cmd=login_submit&id=ab29a1bfb43fc9e807b4ab7c668bbc27ab29a1bfb43fc9e807b4ab7c668bbc27&session=ab29a1bfb43fc9e807b4ab7c668bbc27ab29a1bfb43fc9e807b4ab7c668bbc27
+  -> hxxp://foxlap[.]com/wp-content/themes/sketch-new/amex/amex/sett[.]php?cmd=member_submit&id=ab29a1bfb43fc9e807b4ab7c668bbc27ab29a1bfb43fc9e807b4ab7c668bbc27&session=ab29a1bfb43fc9e807b4ab7c668bbc27ab29a1bfb43fc9e807b4ab7c668bbc27
+hxxp://besta[.]websitewelcome[.]com/~compsci/System/Connection/webscr/
+  -> hxxp://besta[.]websitewelcome[.]com/~compsci/System/Connection/page/
+hxxp://chnes17wsdywealthandmoduleorganisationui[.]duckdns[.]org/secure/svchost[.]exe
+  -> hxxp://chnes17wsdywealthandmoduleorganisationui[.]duckdns[.]org/home/svchost[.]exe
+hxxp://bestconferenceline[.]com/jfk/cmd-login=7b26a8bed1524e98354b23208bd1dd4e/?reff=NjE2ZDAxYzhjNDU5Zjg3ZDQxMTUxYTc0MjQyMzU1ZTg=
+  -> hxxp://bestconferenceline[.]com/jfk/cmd-member=7b26a8bed1524e98354b23208bd1dd4e/?reff=NjE2ZDAxYzhjNDU5Zjg3ZDQxMTUxYTc0MjQyMzU1ZTg=
+hxxp://i01[.]c[.]aliimg[.]com/img/ibank/2014/877/394/1528493778_1627114721[.]search[.]jpg
+  -> hxxp://i01[.]c[.]aliimg[.]com/img/icenter/2014/877/394/1528493778_1627114721[.]search[.]jpg
+hxxp://alfacod[.]com[.]tr/wp-content/uploads/wysija/espace[.]reversement/confirmation/support/ff7de64da97899bdbc087d4e8ead38fa/
+  -> hxxp://alfacod[.]com[.]tr/wp-content/uploads/wysija/espace[.]reversement/continueation/support/ff7de64da97899bdbc087d4e8ead38fa/
+hxxp://gxyzx[.]com/js/?hxxp://us[.]battle[.]net/login/en/?ref=hxxp://gyjvsbrus[.]battle[.]net/d3/en/index&amp;app=com-d3
+  -> hxxp://gxyzx[.]com/js/?hxxp://us[.]battle[.]net/member/en/?ref=hxxp://gyjvsbrus[.]battle[.]net/d3/en/index&amp;app=com-d3
+hxxp://realestatecrm[.]net/~real700p/support[.]update[.]your[.]information[.]account/signup/account/
+  -> hxxp://realestatecrm[.]net/~real700p/support[.]update[.]your[.]information[.]user/signup/user/
+hxxp://apspedrocharry[.]com/plugins/content/usecure/paypal[.]co[.]uk/zooka/pp-uk/logginn[.]html
+  -> hxxp://apspedrocharry[.]com/plugins/content/uhome/paypal[.]co[.]uk/zooka/pp-uk/logginn[.]html
+hxxp://thanhlytot[.]com/1a/WestPax/login[.]php
+  -> hxxp://thanhlytot[.]com/1a/WestPax/member[.]php
+hxxp://fotoblad[.]com/js/chaseonline/auth/login[.]php?cmd=login_submit&amp;id=83c5404568136b202a059752ff2abcf883c5404568136b202a059752ff2abcf8&amp;session=83c5404568136b202a059752ff2abcf883c5404568136b202a059752ff2abcf8
+  -> hxxp://fotoblad[.]com/js/chaseonline/auth/member[.]php?cmd=member_submit&amp;id=83c5404568136b202a059752ff2abcf883c5404568136b202a059752ff2abcf8&amp;session=83c5404568136b202a059752ff2abcf883c5404568136b202a059752ff2abcf8
+hxxp://vplate[.]eu/update-nowing-acc/
+  -> hxxp://vplate[.]eu/news-nowing-acc/
+hxxp://auctionbadger[.]com/~calbum/zp-core/paypal[.]com/us/cgi-bin/webscr=/
+  -> hxxp://auctionbadger[.]com/~calbum/zp-core/paypal[.]com/us/cgi-bin/page=/
+hxxp://pret[.]im/a489d4c35444d0da3fdf83ba7ad0db94/login[.]php
+  -> hxxp://pret[.]im/a489d4c35444d0da3fdf83ba7ad0db94/member[.]php
