@@ -1,0 +1,14 @@
+# DRAFT (T4-02). Package names come from the imports and pip lines of notebooks 05-08.
+# Versions are NOT pinned yet: after the reproducibility run (T4-04), run `pip freeze` on Colab
+# and pin the versions below. Python version: [TBD]
+numpy
+pandas
+pyarrow        # inferred: A.parquet / B.parquet are read with pandas; confirm with `pip freeze`
+scikit-learn   # RandomForest, LogisticRegression, sklearn.base.clone
+joblib
+matplotlib
+tldextract
+rapidfuzz
+shap
+xgboost
+gradio         # demo only (10_demo.ipynb); version is printed by cell 2 of the notebook
