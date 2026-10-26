@@ -1,0 +1,3 @@
+nguồn,raw,after_dropna,after_drop_conflict,after_exact_dedup,B_before,B_after_exact,B_after_domain
+A,100000,100000,99707,98620,,,
+B,235795,235795,235711,233297,233297.0,233284.0,213721.0
