@@ -1,0 +1,24 @@
+{
+  "LR_F1": {
+    "features": "F1"
+  },
+  "RF_F1": {
+    "features": "F1"
+  },
+  "XGB_F1": {
+    "features": "F1"
+  },
+  "LR_F2": {
+    "features": "F2"
+  },
+  "SVM_F2": {
+    "features": "F2"
+  },
+  "RF_F1D2": {
+    "features": "F1D2"
+  },
+  "RF_F1D2_D1": {
+    "features": "F1D2",
+    "preprocess": "D1"
+  }
+}
