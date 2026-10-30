@@ -1,0 +1,5 @@
+model,group,n,n_detected,asr,n_evaded
+RF_F1,"home page, no path",55,55,1.0,55
+RF_F1,other URLs,245,62,0.774,48
+LR_F2,"home page, no path",55,10,0.7,7
+LR_F2,other URLs,245,98,0.204,20

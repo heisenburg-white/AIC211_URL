@@ -1,0 +1,10 @@
+group,op,config,blocked_before,blocked_after
+"B sạch, trang chủ (không ""/"")",add_slash,RF_F1,1.0,0.0003333333333333333
+"B sạch, trang chủ (không ""/"")",add_slash,LR_F2,0.04466666666666667,0.04466666666666667
+"B sạch, trang chủ (không ""/"")",add_slash,RF_D1+D2+D3,1.0,0.0003333333333333333
+"A-test sạch, trang chủ (có ""/"")",drop_slash,RF_F1,0.0035335689045936395,0.9964664310954063
+"A-test sạch, trang chủ (có ""/"")",drop_slash,LR_F2,0.01678445229681979,0.01678445229681979
+"A-test sạch, trang chủ (có ""/"")",drop_slash,RF_D1+D2+D3,0.00441696113074205,0.9955830388692579
+"A-test độc, trang chủ (không ""/"")",add_slash,RF_F1,0.9263157894736842,0.0017543859649122807
+"A-test độc, trang chủ (không ""/"")",add_slash,LR_F2,0.18947368421052632,0.18947368421052632
+"A-test độc, trang chủ (không ""/"")",add_slash,RF_D1+D2+D3,0.9280701754385965,0.021052631578947368
