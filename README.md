@@ -2,13 +2,13 @@
 
 Cross-source and adversarial evaluation of lexical malicious URL detectors.
 
-Course: AIC211 – AI for Cybersecurity · Team: Nhóm Trí · Status: draft; result numbers come from the 24 Oct 2026 freeze, a few `[TBD]` remain
+Course: AIC211 – AI for Cybersecurity · Team: Nhóm Trí · Status: final for submission (30 Oct 2026); result numbers come from the 24 Oct 2026 freeze and the separate result files listed below
 
 ---
 
 ## Overview
 
-Many papers report 99% accuracy for malicious URL detectors on one benchmark. This project does **not** try to beat that number. It asks:
+Many papers report >90% accuracy for malicious URL detectors on one benchmark. This project does **not** try to beat that number. It asks:
 
 > How much of the benchmark score survives (a) data from a different source and (b) an attacker who edits the URL on purpose, and which cheap defense wins back the most?
 
@@ -32,7 +32,7 @@ Terminology used everywhere in this repo: **F1-score** is the metric; **F1 featu
 ```
 AIC211_URL/
 ├── README.md
-├── requirements.txt        # [TBD] pinned after the reproducibility run
+├── requirements.txt        # scikit-learn==1.6.1 (team pin); other versions pinned after the reproducibility run
 ├── .gitignore
 ├── src/                    # shared modules; do not edit, add new files instead
 │   ├── common.py           # cleaning, domain split, F1/F2, threshold_at_fpr, evaluate, log_result
@@ -41,17 +41,19 @@ AIC211_URL/
 │   ├── defenses.py         # d1_normalize
 │   ├── d2.py               # d2_features, make_F1D2
 │   ├── e4.py               # load_configs (5 defense configurations), clean_eval; written by notebook 07 (cell 3)
-│   └── defenses_plus.py    # [TBD] optional D1+ (TV3)
-├── notebooks/              # 01_… to 10_demo, in run order (see "How to run")
+│   └── defenses_plus.py    # D1+ normalization (also removes the trailing "/"); used by notebook 10 (TV3)
+├── notebooks/              # 01_… to 11_demo, in run order (see "How to run")
 ├── models/                 # small JSON only: thresholds*.json, model_info.json
 ├── data/                   # EMPTY on GitHub (see "Data")
 ├── results/
 │   ├── results.csv                      # every result, written only through log_result()
 │   ├── results_FROZEN_2026-10-24.csv    # source of all numbers in the report (frozen 24 Oct 2026)
 │   ├── dedup_log.csv
-│   ├── tables/                          # final tables, auto-generated
-│   └── appendix/                        # samples_T1.txt … samples_T7.txt (defanged)
-└── figures/                # final figures, auto-generated
+│   ├── E2b_slash_share.csv, E2b_slash_test.csv, E3_T1_split.csv, E4_D1p_summary.csv  # result files outside the freeze
+│   ├── samples_T1.txt … samples_T7.txt  # attack examples (defanged; report Appendix A, Table A1)
+│   ├── appendix/                        # appendix_dedup_and_features.md (cleaning table, 19 F1 features)
+│   └── tables/                          # final tables, auto-generated
+└── figures/                # Fig2_slash_test_EN.png (one-character "/" test), Fig3_D1plus_EN.png (D1+)
 ```
 
 The repo mirrors the working folder on Google Drive (without data and model files), so a notebook only needs its `ROOT` line changed.
@@ -64,26 +66,26 @@ The repo mirrors the working folder on Google Drive (without data and model file
 
 ### Source A – Malicious URLs dataset (Kaggle) · train / validation / test
 
-- Kaggle dataset "Malicious URLs dataset" by `sid321axn`: https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset `[TBD: verify link in T4-06]`
-- Download from the Kaggle page (login required) or with the Kaggle CLI. Expected raw file: `[TBD: exact file name, confirm with TV1]`.
-- We draw a random sample of 100,000 URLs (sampling seed: `[TBD]`).
+- Kaggle dataset "Malicious URLs dataset" by Manu Siddhartha (Kaggle user `sid321axn`, 2021): https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset
+- Download from the Kaggle page (login required) or with the Kaggle CLI. Raw file: `malicious_phish.csv` (columns `url`, `type`; 651,191 rows), downloaded from the Kaggle page on 10 Oct 2026.
+- We draw a random sample of 100,000 URLs (sampling seed: 42).
 - Labels: benign = 0; phishing + malware = 1; defacement is dropped.
-- Split 70/15/15 by **registered domain**, so one domain never appears in two splits.
-- This dataset merges several public sources. ISCX-URL-2016 is one of them, but we do not use ISCX directly. `[TBD: confirm wording in T4-06]`
+- Split ≈ 73/13/14 by **registered domain**, so one domain never appears in two splits.
+- The full dataset has 651,191 URLs (428,103 benign, 96,457 defacement, 94,111 phishing, 32,520 malware). Its author built it by merging five public sources: ISCX-URL-2016, the Malware Domain Blacklist, a public list of benign URLs on GitHub, PhishTank and PhishStorm. ISCX-URL-2016 is therefore one source inside A, but we do not use ISCX-URL-2016 directly. (Counts and sources as described by the dataset author.)
 
 ### Source B – PhiUSIIL Phishing URL dataset (UCI) · test only
 
 - UCI Machine Learning Repository, dataset id 967: https://archive.ics.uci.edu/dataset/967 (CC BY 4.0, 235,795 instances).
-- Option 1: download the CSV from the UCI page. Option 2: `ucimlrepo.fetch_ucirepo(id=967)`. Route used by the notebook: `[TBD: confirm with TV1]`.
+- Option 1: download the CSV from the UCI page. Option 2: `ucimlrepo.fetch_ucirepo(id=967)`.
 - We keep only the URL and the label. The original label is 1 = legitimate, 0 = phishing; the pipeline flips it so that 1 = malicious.
 - B is used for testing only. Nothing (threshold, hyperparameters) is tuned on B.
 - URLs whose registered domain also appears in the training split of A are removed from B.
 
-### Source C – OpenPhish snapshot (optional) · recall only
+### Source C – OpenPhish snapshot · collected, not evaluated
 
-- A snapshot of the public OpenPhish feed taken on 10 Oct 2026, 300 malicious URLs, stored locally under `data/raw/openphish/`.
-- Not redistributed in this repo. `[TBD: file naming and redistribution terms, confirm with TV2]`
-- It has no benign URLs, so only recall can be measured.
+- One snapshot of the public OpenPhish feed, taken on 10 Oct 2026: 300 malicious URLs in `data/raw/openphish/2026-10-10.txt`.
+- It is **not used in any experiment** in this version. It was optional in our plan, and after the results were frozen on 24 Oct 2026 we only added the planned E2b and D1+ analyses. It also has no benign URLs, so it could not show FPR (report Section 10.1).
+- Not redistributed in this repo.
 
 ### Cleaning summary
 
@@ -100,13 +102,13 @@ Per-step counts (source: `results/dedup_log.csv`):
 | After dropping missing values | 100,000 (−0) | 235,795 (−0) |
 | After dropping URLs that carry both labels | 99,707 (−293) | 235,711 (−84) |
 | After exact-duplicate removal | 98,620 (−1,087) | 233,297 (−2,414) |
-| Further exact-duplicate removal (`B_after_exact`) | – | 233,284 (−13) `[TBD: confirm meaning with TV1]` |
+| Step `B_after_exact` in `dedup_log.csv` | – | 233,284 (−13) |
 | Removal of URLs whose registered domain is in the training split of A | – | 213,721 (−19,563) |
 
 ### Citations
 
-- Prasad, A., Chandra, S. PhiUSIIL: A diverse security profile empowered phishing URL detection framework based on similarity index and incremental learning. *Computers & Security* (2024). doi:10.1016/j.cose.2023.103545
-- Kaggle "Malicious URLs dataset": `[TBD: full citation, T4-06]`
+- Prasad, A., Chandra, S. PhiUSIIL: A diverse security profile empowered phishing URL detection framework based on similarity index and incremental learning. *Computers & Security* 136, 103545 (2024). doi:10.1016/j.cose.2023.103545
+- Siddhartha, M. Malicious URLs dataset. Kaggle (2021). https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset, accessed 10 Oct 2026 (file `malicious_phish.csv`, 651,191 rows).
 
 ---
 
@@ -127,28 +129,35 @@ import sys
 sys.path.insert(0, ROOT + '/src')
 ```
 
-3. Install dependencies: `pip install -r requirements.txt` (Python version: `[TBD]`).
+3. Install dependencies: `pip install -r requirements.txt` (we ran everything on the default Python 3 of Google Colab). scikit-learn is pinned to 1.6.1 (team decision); the saved `.joblib` models should be loaded with the same version.
 
 ### 2. Run the notebooks in this order
 
 | # | Notebook | What it does | Owner | Runtime |
 |---|----------|--------------|-------|---------|
-| 1 | `01_data_baseline.ipynb` | Cleaning, domain split, LR-F1 baseline | TV1 | [TBD] |
-| 2 | `02_threat_model_T1_T7.ipynb` | Transformations T1–T7 and validity checks | TV2 | [TBD] |
-| 3 | `03_models_E1_E2.ipynb` | 5 models, locked thresholds, E1, E2 | TV1 | [TBD] |
-| 4 | `04_attack_trial_D1.ipynb` | First attack trials, first version of D1 | TV2 | [TBD] |
-| 5 | `05_E3_D1.ipynb` | E3 (seed 0) and final D1 | TV2 | [TBD] |
-| 6 | `06_D2_tables.ipynb` | D2 features and summary tables | TV1 | [TBD] |
-| 7 | `07_D3_E4.ipynb` | D3 and E4 (seed 0), list of URLs that still evade | TV2 | [TBD] |
-| 8 | `08_3seeds_error_analysis.ipynb` | Seeds 1 and 2, error analysis | TV1 | [TBD] |
-| 9 | `09_E2b_D1plus.ipynb` | Shape control (E2b) and D1+ `[TBD: optional]` | TV3 | [TBD] |
-| 10 | `10_demo.ipynb` | Gradio demo (string processing only) | TV4 | 59s |
+| 1 | `01_data_baseline.ipynb` | Cleaning, domain split, LR-F1 baseline | TV1 | – |
+| 2 | `02_threat_model_T1_T7.ipynb` | Transformations T1–T7 and validity checks | TV2 | – |
+| 3 | `03_models_E1_E2.ipynb` | 5 models, locked thresholds, E1, E2 | TV1 | – |
+| 4 | `04_attack_trial_D1.ipynb` | First attack trials, first version of D1 | TV2 | – |
+| 5 | `05_E3_D1.ipynb` | E3 (seed 0) and final D1 | TV2 | – |
+| 6 | `06_D2_tables.ipynb` | D2 features and summary tables | TV1 | – |
+| 7 | `07_D3_E4.ipynb` | D3 and E4 (seed 0), list of URLs that still evade | TV2 | – |
+| 8 | `08_3seeds_error_analysis.ipynb` | Seeds 1 and 2, error analysis | TV1 | – |
+| 9 | `09_TV3_Tri_E2b_DoiChungHinhDang.ipynb` | E2b shape control and the one-character "/" test. **Do not run cell 9**: it overwrites `results/E2b_slash_share.csv` | TV3 | – |
+| 10 | `10_TV3_Tri_D1plus_ChuanHoaDauSlash.ipynb` | D1+ defense (trailing "/" normalized); cell 4 rebuilds the four D1+ models | TV3 | – |
+| 11 | `11_demo.ipynb` | Gradio demo (string processing only) | TV4 | 59s |
 
 Model files (`.joblib`) are not in the repo. They are regenerated by notebooks 03, 06 and 07.
 
+**D1+ models.** The four D1+ models are not stored on Google Drive. To reproduce the D1+ results, run cell 4 of notebook 10 again (about 5 minutes) before the cells that evaluate them.
+
+**Notebook 09.** Do not run cell 9 of notebook 09. It overwrites `results/E2b_slash_share.csv`, which the report uses.
+
 ### 3. Reproducibility check
 
-Do **not** re-run notebooks in the main folder: they append rows to `results/results.csv`. Copy the folder to `AIC211_URL_repro`, copy `data/raw/` into it, change only the `ROOT` line, run the notebooks in the order above, then compare the seed 0 numbers (thresholds, LR-F1 baseline, E3 at k = 1, E4 seed 0) with `results/results_FROZEN_2026-10-24.csv`. Outcome of the check: `[TBD]`.
+Do **not** re-run notebooks in the main folder: they append rows to `results/results.csv`. Copy the folder to `AIC211_URL_repro`, copy `data/raw/` into it, change only the `ROOT` line, run the notebooks in the order above, then compare the seed 0 numbers (thresholds, LR-F1 baseline, E3 at k = 1, E4 seed 0) with `results/results_FROZEN_2026-10-24.csv`. Outcome of the check: we did not finish an independent re-run before the deadline.
+
+**D1+ numbers are not in `results.csv` or the FROZEN file.** Notebook 10 was run with `LOG = False`, so its numbers are only in `results/E4_D1p_summary.csv`. To check D1+, rebuild the models (cell 4 of notebook 10) and compare with that summary file.
 
 Results are written only through `log_result()`. Tables and figures are generated from `results.csv`, never typed by hand.
 
@@ -180,7 +189,7 @@ All numbers below come from `results/results_FROZEN_2026-10-24.csv` (frozen on 2
 | SVM-F2 | A-test | 0.880 | 0.333 | 0.483 | 1.18% | 0.751 |
 | SVM-F2 | B | 0.762 | 0.252 | 0.379 | 4.94% | 0.637 |
 
-Confusion matrices: `results/tables/[TBD]`.
+Confusion matrices: `figures/E2_confusion.png`.
 
 **E3 – recall under attack (all changes T1–T7, mean of 3 seeds, standard deviation at most 3.6 points)**
 
@@ -214,6 +223,8 @@ Source B:
 
 ASR (attack success rate) = share of malicious URLs that were detected before the edit and evade after it.
 
+E3 and E4 attack each detector on a sample of 300 malicious URLs per source, so recall at k = 0 in E3 (for example 39.0% for RF-F1 on A-test) is close to, but not the same as, recall on the full test set in E2 (38.7%).
+
 **Extra analyses**
 
 E2b shape control (recall at the locked threshold; home page = URL with no path):
@@ -223,11 +234,28 @@ E2b shape control (recall at the locked threshold; home page = URL with no path)
 | RF-F1 | 38.7% | 92.6% | 24.9% | 46.5% | 65.0% | 2.1% |
 | LR-F2 | 33.6% | 18.9% | 37.4% | 24.0% | 22.7% | 27.2% |
 
-D1+ (TV3): `[TBD]`
+One-character test (source: `results/E2b_slash_test.csv`, notebook 09):
 
-**Negative results** reported in the paper: `[TBD]`
+![Adding or removing one trailing "/" flips the decision of RF-F1](figures/Fig2_slash_test_EN.png)
 
-Figures: `figures/` `[TBD]`.
+*Figure 2 (report): adding or removing one trailing "/" on home pages flips the decision of RF-F1 and RF D1+D2+D3; LR-F2 (character n-grams) does not change. Open circle = before, filled circle = after. On 3,000 benign home pages of B, adding "/" lowers the block rate of RF-F1 from 100% to 0.03%. On malicious home pages of A-test, adding "/" lowers its recall from 92.6% to 0.2%.*
+
+D1+ (TV3; source: `results/E4_D1p_summary.csv` only, not `results.csv` or the FROZEN file; RF, 300 malicious A-test URLs, mean of 3 seeds):
+
+| Configuration | FPR B | PR-AUC B | Recall clean (A-test) | Recall under greedy | ASR greedy | ASR random |
+|---------------|-------|----------|-----------------------|---------------------|------------|------------|
+| D1+D2+D3rt (control, rebuilt) | 100% | 0.254 | 38.5% | 14.2% | 64.7% | 20.1% |
+| D1p+D2+D3 (D1+) | 4.8% | 0.422 | 22.0% | 14.4% | 35.3% | 5.5% |
+
+![D1+ against its rebuilt control](figures/Fig3_D1plus_EN.png)
+
+The control D1+D2+D3rt was rebuilt with the same procedure as the official D1+D2+D3 and is within 0.8 points of its greedy ASR (64.7% vs 63.9%). ASR is lower for D1+ mainly because D1+ catches fewer URLs before the attack; recall under attack, which counts all malicious URLs, does not improve.
+
+**Negative results** reported in the paper:
+- D1+ removes the trailing-"/" artifact and fixes the false alarms on B (100% → 4.8%), but clean recall on A-test falls from 38.5% to 22.0% and recall under attack does not improve (14.2% vs 14.4%).
+- Adversarial training (D3) looks strong against random edits but weak against the greedy attacker: adding D3 to D1+D2 lowers random ASR by 16.5 points (38.9% → 22.4%) but greedy ASR by only 4.4 points (68.3% → 63.9%).
+
+Figures: `figures/Fig2_slash_test_EN.png` (report Figure 2), `figures/Fig3_D1plus_EN.png` (report Figure 3).
 
 ---
 
@@ -235,7 +263,7 @@ Figures: `figures/` `[TBD]`.
 
 - **No live malicious URLs in this repo.** Every URL shown in the README, report, appendix, figures and demo is defanged (`hxxp`, `[.]`).
 - **Never open, click or download** any URL from the datasets. The code only processes strings and never makes a network request to a URL from the data.
-- The demo (`10_demo.ipynb`) is string-only: it scores and edits text and blocks outbound connections while it does so.
+- The demo (`11_demo.ipynb`) is string-only: it scores and edits text and blocks outbound connections while it does so.
 - Raw datasets and the OpenPhish snapshot are git-ignored. Model files are git-ignored.
 - Every attacker edit is checked by `is_valid()`. Edits that need a new domain (T5–T7) must not reuse a known benign domain, and no real brand domain is used.
 - The attacks are for evaluating and hardening detectors. Do not use them against real systems.
@@ -246,12 +274,13 @@ Figures: `figures/` `[TBD]`.
 
 ## AI usage
 
-Declaration draft (final wording: T4-08, `[TBD]`).
+Full statement and per-member table: report section "Use of AI tools" (draft in `T4-08_AI_declaration.md`).
 
-- Tool: Claude (Anthropic). Version and dates: `[TBD]`.
-- Used for: drafting Colab code, README and report text, and explaining concepts. Exact sections per member: `[TBD]`.
-- Not delegated: running the code, choosing thresholds, and all reported numbers. Code was run by team members on Colab and output was pasted back.
-- How we checked: every number in a draft is traced to a named source file; results are written only by `log_result()`; numbers in the report and slides are compared with `results_FROZEN_2026-10-24.csv`; citations are compared with the original papers.
+- Tool: Claude (Anthropic), used through claude.ai. Models and dates per member are in the report, Table 21: TV1 Claude Sonnet 5.5 (from 25 Oct 2026); TV2 Claude, Opus 5.5 in the latest sessions (4–29 Oct 2026); TV3 Claude Opus 5.5 (from 16 Sep 2026); TV4 Claude, Opus 5.5 in the latest sessions (23–30 Oct 2026).
+- One member also used Gemini (Google) for slide layout suggestions.
+- Used for: drafting Colab code, README, report, slide and appendix text; explaining concepts and papers; checking draft text against the result files and the cited papers.
+- Not delegated: running the notebooks and research decisions (question, data sources, threat model, the 1% FPR operating point). Members ran all notebooks on Colab. To get help, members gave the assistant notebook output, shared code files, team documents and result files (`results_FROZEN_2026-10-24.csv`, `dedup_log.csv`); the raw datasets were not given to it `[TBD: TV1 confirm]`. TV3's assistant also read drafts, figures and result files in the shared Drive folder to merge the report, not raw data.
+- How we checked: every number comes from our own notebook runs. Most were written through `log_result()` and frozen in `results_FROZEN_2026-10-24.csv`; the rest are in separate result files: `results/dedup_log.csv`, `E2b_slash_test.csv`, `E2b_slash_share.csv`, `E4_D1p_summary.csv`, `E3_T1_split.csv` and the timing cell T1-07 (run 28 Oct 2026). Where the assistant computed a summary table from these files (the Results section of this README), a member compared it with the file. The assistant compared our Related Work text with the cited papers; a member then checked each correction against the paper or the publisher's page.
 
 ---
 
@@ -266,4 +295,4 @@ Two members are both named Nguyễn Minh Trí; always use the TV number or stude
 | TV3 | Nguyễn Minh Trí | SE211087 | Team lead: extra analyses, introduction to conclusion, editing, submission |
 | TV4 | Nguyễn Trần Đan Huy | SE211085 | Repo, README, demo, reproducibility check, appendix, references, AI declaration |
 
-License: `[TBD]`
+License: none set (course project).
